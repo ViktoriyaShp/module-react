@@ -11,7 +11,7 @@ function Card({url, title, description, price}) {
 
                 <div className='card_price'>{price}</div>
 
-                <button class="card_plus"></button>
+                <button className="card_plus"></button>
             </div>
     )
 }
