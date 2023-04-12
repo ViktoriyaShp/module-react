@@ -1,5 +1,11 @@
 import './products.css'
+
 import Card from '../../components/elements/card/index.js';
+
+import f1 from '../../images/f1.png'
+import f2 from '../../images/f2.png'
+import f3 from '../../images/f3.png'
+import basket from '../../images/basket.png'
 
 function Products() {
     return (
@@ -9,13 +15,13 @@ function Products() {
             <button className='products_basket'>
                 <div className='products_price'>
                     <p>3 товара<br />на сумму 3 500 ₽</p>
-                    <img src="/images/basket.png" alt="" />
+                    <img src={basket} alt="" />
                 </div>
             </button>
             </div>
             <div className='container'>
             <Card 
-            url='/images/1.png'
+            url={f1}
             title='Устрицы по рокфеллеровски'
             description='Значимость этих проблем
             настолько очевидна, что укрепление и развитие
@@ -24,7 +30,7 @@ function Products() {
             />
 
             <Card 
-            url='/images/2.png'
+            url={f2}
             title='Свиные ребрышки на гриле с зеленью'
             description='Не следует, однако забывать, что
             реализация намеченных плановых'
@@ -32,7 +38,7 @@ function Products() {
             />
 
             <Card 
-            url='/images/3.png'
+            url={f3}
             title='Креветки по-королевски в лимонном соке'
             description='Значимость этих проблем настолько 
             очевидна, что укрепление и развитие структуры 
@@ -41,7 +47,7 @@ function Products() {
             />
 
             <Card 
-            url='/images/1.png'
+            url={f1}
             title='Устрицы по рокфеллеровски'
             description='Значимость этих проблем
             настолько очевидна, что укрепление и развитие
@@ -50,7 +56,7 @@ function Products() {
             />
 
             <Card 
-            url='/images/1.png'
+            url={f1}
             title='Устрицы по рокфеллеровски'
             description='Значимость этих проблем
             настолько очевидна, что укрепление и развитие
@@ -59,7 +65,7 @@ function Products() {
             />
 
             <Card 
-            url='/images/2.png'
+            url={f2}
             title='Свиные ребрышки на гриле с зеленью'
             description='Не следует, однако забывать, что
             реализация намеченных плановых'
@@ -67,7 +73,7 @@ function Products() {
             />
 
             <Card 
-            url='/images/3.png'
+            url={f3}
             title='Креветки по-королевски в лимонном соке'
             description='Значимость этих проблем настолько 
             очевидна, что укрепление и развитие структуры 
@@ -76,7 +82,7 @@ function Products() {
             />
 
             <Card 
-            url='/images/1.png'
+            url={f1}
             title='Устрицы по рокфеллеровски'
             description='Значимость этих проблем
             настолько очевидна, что укрепление и развитие
