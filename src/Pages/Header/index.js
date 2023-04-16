@@ -4,9 +4,6 @@ import './index.css';
 
 import basket from '../../assets/basket.png'
 
-// import Products from '../ProductsPage/index.js';
-
-
 const Header =() => {
     return (
         <div className='header'>

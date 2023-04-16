@@ -1,8 +1,6 @@
 
 import './index.css';
 
-// import './ProductsPage.css'
-
 import Card from '../../components/elements/card/index.js';
 
 import image1 from '../../assets/f1.png'
