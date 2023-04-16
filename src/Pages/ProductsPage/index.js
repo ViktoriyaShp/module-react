@@ -1,8 +1,6 @@
 
 import './index.css';
 
-// import './ProductsPage.css'
-
 import Card from '../../components/elements/card/index.js';
 
 import image1 from '../../assets/f1.png'
@@ -19,7 +17,7 @@ const Products =() => {
     useEffect(() => {
         setTimeout(() => {
             setProducts(prevState => [
-                ...prevState,
+                // ...prevState,
                 
                     {
                         id: 1,
@@ -49,6 +47,35 @@ const Products =() => {
                         description:'Значимость этих проблем настолько очевидна, что укрепление и развитие структуры ',
                         price: 2700
                     },
+                                    
+                    {
+                        id: 5,
+                        image: image1,
+                        title: 'Устрицы по рокфеллеровски',
+                        description:'Значимость этих проблем настолько очевидна, что укрепление и развитие структуры ',
+                        price: 2700
+                    },
+                    {
+                        id: 6,
+                        image: image2,
+                        title: 'Свиные ребрышки на гриле с зеленью',
+                        description:'Не следует, однако забывать, что реализация намеченных плановых',
+                        price: 1600
+                    },
+                    {
+                        id: 7,
+                        image: image3,
+                        title: 'Креветки по-королевски в лимонном соке',
+                        description:'Значимость этих проблем настолько очевидна, что укрепление и развитие структуры обеспечивает широкому кругу',
+                        price: 1820
+                    },
+                    {
+                        id: 8,
+                        image: image1,
+                        title: 'Устрицы по рокфеллеровски',
+                        description:'Значимость этих проблем настолько очевидна, что укрепление и развитие структуры ',
+                        price: 2700
+                    }
             ])
 
         }, 1200)
