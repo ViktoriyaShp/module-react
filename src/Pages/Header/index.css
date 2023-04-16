@@ -1,12 +1,6 @@
-.container {
-    background-color: #161516;
-    width: 75%;
-    display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
-    padding: 81px 70px 73px 70px;
-    flex-wrap: wrap;
-    row-gap: 35px;
+.header {
+    background: #161516;
+    width: 100vw;
 }
 
 .products {
@@ -15,14 +9,14 @@
     background-color: #161516;
 }
 
-.products_header{
+.header_products{
     display: flex;
     width: 75%;
     justify-content: space-around;
     margin: 0 auto;
 }
 
-.products_title {
+.header_title {
     padding: 53px 787px 0 0;
     text-transform: uppercase;
     font-family: 'Montserrat';
@@ -33,14 +27,14 @@
     color: #FFFFFF;
 }
 
-.products_basket{
+.header_basket{
     background-color: #161516;
     padding: 51px 0 0;
     border: none;
     cursor: pointer;
 }
 
-.products_price {
+.header_price {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -51,7 +45,7 @@
 }
 
 
-.products_price > p {
+.header_price > p {
     float: left;
     display: block;
     padding: 0 20px;

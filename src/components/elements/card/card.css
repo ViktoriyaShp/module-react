@@ -1,48 +1,61 @@
 
 .card {
-    position: relative;
-    display: inline;
-    float: left;
+    box-sizing: border-box;
     width: 312px;
     height: 552px;
     border: 1px solid #D58C51;
-    font-family: 'Montserrat';
+    padding: 40px 20px;
+}
+
+.card:hover > .wrapper >.text {
+    color:#D58C51;
+}
+
+.card:hover > .text {
+    color:#D58C51;
+}
+
+.text{
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     color: #FFFFFF;
 }
 
-.card_preview {
-    display: flex;
-    margin: 43px auto 31px;
-}
-
-.card_title {
+.title {
+    margin: 31px auto 0;
     font-weight: 500;
-    font-size: 21px;
+    font-size: 17px;
     line-height: 21px;
-    padding: 0 27px 13px 21px;
-    margin: 0 auto;
 }
 
-.card_description {
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 20px;
-    padding: 0 27px 13px 21px;
-    margin: 0 auto;
+
+.description {
+    margin: 13px auto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
 }
 
-.card_price {
-    position: absolute;
-    bottom: 36px;
-    left: 21px;
-    color: #FFFFFF;
+.wrapper {
+    display: flex;
+    margin-top: 60px;
+    justify-content: space-between;
+
 }
 
-.card_plus {
+.price {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+}
+
+.add-to-cart-button {
     display:inline-block;
+    border-radius:50%;
+    border:1px solid #FFFFFF; 
     width:30px;
     height:30px;
+    cursor: pointer;
     background:
         linear-gradient(#fff,#fff),
         linear-gradient(#fff,#fff),
@@ -50,10 +63,16 @@
     background-position:center;
     background-size: 50% 2px,2px 50%; 
     background-repeat:no-repeat;
-    border:1px solid #FFFFFF; 
-    border-radius:50%;
-    position: absolute;
-    bottom: 36px;
-    right: 32px;
-    cursor: pointer;
+}
+
+.card:hover > .add-to-cart-button {
+    color:#D58C51;
+}
+
+.card:hover > .txt >.text {
+    color:#D58C51;
+}
+
+.txt {
+    height: 75px;
 }
