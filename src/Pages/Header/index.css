@@ -19,7 +19,7 @@
 .header_title {
     padding: 53px 787px 0 0;
     text-transform: uppercase;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 31px;
@@ -35,7 +35,7 @@
 }
 
 .header_price {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
