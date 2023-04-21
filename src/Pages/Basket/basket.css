@@ -1,0 +1,71 @@
+body {
+    width: 100vw;
+    height:calc(100vh–173px);
+    background-color: #161516;
+}
+
+.basket_header {
+    display: flex;
+    padding: 53px 385px;
+    justify-content: center;
+    gap: 63px;
+}
+
+.basket_title{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 38px;
+    color: #FFFFFF;
+}
+
+.basket_btn {
+    background-color: #161516;
+    border-radius:50%;
+    border: 1px solid #D58C51; 
+    width:32px;
+    height:32px;
+    cursor: pointer;
+}
+
+hr {
+    background-image: linear-gradient(to right, transparent, rgba(242, 156, 59, 0.737), transparent);
+    border: 0;
+    height: 1px;
+    margin: 22px 0 22px 0;
+    box-sizing:content-box;
+    display: block;
+}
+
+.basket_footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 290px;
+}
+
+.order_btn {
+    width: 200px;
+    height: 42px;
+    background: #D58C51;
+}
+
+.order_txt {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #131313;
+}
+
+.basket_sum {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
