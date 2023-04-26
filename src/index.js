@@ -20,14 +20,14 @@ import {
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/module-react",
     element: <>
     <Header />,
     <Products />,
     </>
   },
   {
-    path: "/cart",
+    path: "/module-react/cart",
     element: <>
     <HeaderBasket />,
     <Basket />,

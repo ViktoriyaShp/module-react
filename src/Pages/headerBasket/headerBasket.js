@@ -11,7 +11,7 @@ const HeaderBasket =() => {
     let navigate = useNavigate();
 
     const onBackButtonClickHandler = () => {
-        return navigate('/')
+        return navigate('/module-react')
     };
 
     return (

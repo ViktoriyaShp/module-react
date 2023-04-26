@@ -11,7 +11,7 @@ const Header =() => {
     let navigate = useNavigate();
 
     const onCartButtonClickHandler = () => {
-        return navigate('/cart')
+        return navigate('/module-react/cart')
     };
 
     return (
