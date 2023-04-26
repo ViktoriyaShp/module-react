@@ -10,6 +10,7 @@ hr {
 .basket_footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0 515px;
 }
 
@@ -21,6 +22,7 @@ hr {
 }
 
 .order_txt {
+    margin: auto;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;

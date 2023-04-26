@@ -22,6 +22,7 @@ body {
 }
 
 .basket_btn {
+    margin: auto 0;
     background-color: #161516;
     border-radius:50%;
     border: 1px solid #D58C51; 
