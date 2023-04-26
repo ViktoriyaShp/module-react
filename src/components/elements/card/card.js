@@ -2,21 +2,17 @@ import React from 'react';
 
 import './card.css'
 
-const Card = ({id, image, title, description, price, amount}) => {
+const Card = ({id, image, title, description, price, weight}) => {
 
-    const onAddToCartClickHandler = () => {
-        const productsInCart = JSON.parse(localStorage.getItem('cart')) || [];
+    const onAddClickHandler = () => {
+        const currentCart = JSON.parse(localStorage.getItem('cart')) || [];
 
-        const updatedCart =[
-            ...productsInCart,
-            {id, image, title, description, price}
-        ]
+        const product = {id, title, image, price};
 
-        localStorage.setItem('cart', JSON.stringify(updatedCart))
+        currentCart.push(product);
 
-        const amountPrice = updatedCart.reduce((prev, current) => prev + current.price, 0);
+        localStorage.setItem('cart', JSON.stringify(currentCart))
 
-        console.log(`Сумма заказа ${amountPrice}`);
     }
 
     return (
@@ -29,10 +25,10 @@ const Card = ({id, image, title, description, price, amount}) => {
                     <p className={'text description'}>{description}</p>
                 </div>
                 <div className='wrapper'>
-                    <p className={' text price'}>{price} ₽</p>
+                    <p className={' text price'}>{price} ₽ / <span>{weight} г.</span></p>
                     <button 
                         className={'add-to-cart-button'}
-                        onClick={onAddToCartClickHandler}>+
+                        onClick={onAddClickHandler}>+
                     </button>
                 </div>
             </div>

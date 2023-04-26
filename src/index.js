@@ -1,13 +1,44 @@
 import React from 'react';
+
 import ReactDOM from 'react-dom/client';
+
 import './index.css';
-import App from './App';
+
 import reportWebVitals from './reportWebVitals';
+
+import Header from './Pages/Header/header.js';
+import Products from './Pages/ProductsPage/productsPage.js';
+
+import HeaderBasket from './Pages/headerBasket/headerBasket';
+import Basket from './Pages/Basket/basket';
+
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/module-react",
+    element: <>
+    <Header />,
+    <Products />,
+    </>
+  },
+  {
+    path: "/module-react/cart",
+    element: <>
+    <HeaderBasket />,
+    <Basket />,
+    </>
+  }
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
