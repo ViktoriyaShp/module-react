@@ -12,9 +12,11 @@ export const productSlice = createSlice({
 
 reducers: {
     add: (state, actions) => {
+        
         state.list.push(actions.payload);
         
         state.counter += 1;
+
         state.totalPrice += actions.payload.price;
     },
     remove: (state, actions) => {
@@ -32,20 +34,3 @@ export const { add, remove } = productSlice.actions
 
 export default productSlice.reducer
 
-// const initialState = {
-//     basket: []
-// }
-
-// export const productsSlise = createSlice({
-//     name: 'products',
-//     initialState,
-//     reducers: {
-//         addBasket: (state, payload) => {
-//             state.basket.push(payload.payload)
-//         }
-//     }
-// })
-
-// export const { addBasket } = productsSlise.actions
-
-// export default productsSlise.reducer

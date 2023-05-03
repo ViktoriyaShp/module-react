@@ -13,6 +13,17 @@ import { faPlus, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 const Card = ({id, image, title, description, price, weight}) => {
 
+    // const onAddToCartClickHandler = () => {
+
+    //     const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    //     const product = {id, image, title, price}
+
+    //     cart.push(product)
+
+    //     localStorage.setItem('cart', JSON.stringify(cart))
+    // }
+
     const dispatch = useDispatch();
 
     const [isAdded, setAddState] = useState(false);
