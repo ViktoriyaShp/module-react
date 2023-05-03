@@ -9,9 +9,18 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const Header =() => {
-
+    
     const counter = useSelector(({productReducer}) => productReducer.counter)
     const totalPrice = useSelector(({productReducer}) => productReducer.totalPrice)
+
+    function declOfNum(n, text_forms) {  
+        n = Math.abs(n) % 100; 
+        const n1 = n % 10;
+        if (n > 10 && n < 20) { return text_forms[2]; }
+        if (n1 > 1 && n1 < 5) { return text_forms[1]; }
+        if (n1 == 1) { return text_forms[0]; }
+        return text_forms[2];
+    }
 
     let navigate = useNavigate();
 
@@ -26,7 +35,7 @@ const Header =() => {
                 <div className='header_basket-btn'>
                     <button className='header_basket' onClick={onCartButtonClickHandler}>
                         <div className='header_price'>
-                            <p>{counter} товара<br />на сумму {totalPrice} ₽</p>
+                            <p>{counter} {declOfNum(counter, ['товар', 'товара', 'товаров'])}<br />на сумму {totalPrice} ₽</p>
                             <img src={basket} alt="" />
                         </div>
                     </button>

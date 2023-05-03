@@ -11,10 +11,6 @@ import image3 from '../../assets/f3.png'
 import { useEffect } from 'react';
 import { useState } from 'react';
 
-// import { add } from '../../store/reducers/products'
-
-// import { addBasket } from '../../store/reducers/products'
-
 const Products =() => {
 
     const [products, setProducts] = useState([]);
@@ -22,8 +18,7 @@ const Products =() => {
     useEffect(() => {
         setTimeout(() => {
             setProducts(prevState => [
-                // ...prevState,
-                
+            
                     {
                         id: 1,
                         image: image1,
@@ -89,7 +84,6 @@ const Products =() => {
                         weight: 500
                     }
             ])
-
         })
     }, [])
 
@@ -104,7 +98,6 @@ const Products =() => {
             description={product.description}
             price={product.price}
             weight={product.weight}
-            // add={() => add(product)}
             />)
         }</div>
     )

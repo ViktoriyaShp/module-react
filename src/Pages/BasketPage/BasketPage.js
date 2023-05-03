@@ -1,3 +1,4 @@
+import React from 'react';
 
 import './BasketPage.css';
 
@@ -7,13 +8,8 @@ import FooterBasket from '../../components/basket/BasketFooter/BasketFooter';
 import { useEffect } from 'react';
 import { useState } from 'react';
 
-// import { useSelector } from 'react-redux';
-
 
 const Basket =() => {
-
-    // const basket = useSelector(state => state.products.basket)
-    // console.log('basket', basket);
 
     const [items, setItems] = useState([]);
     const [amountPrice, setAmountPrice] = useState(0);

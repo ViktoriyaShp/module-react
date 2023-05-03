@@ -10,32 +10,36 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faPlus, faXmark } from '@fortawesome/free-solid-svg-icons';
 
-// import { addBasket } from '../../../store/reducers/products';
 
 const Card = ({id, image, title, description, price, weight}) => {
 
-    // const onAddClickHandler = () => {
-    //     const currentCart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    //     const product = {id, title, image, price};
-
-    //     currentCart.push(product);
-
-    //     localStorage.setItem('cart', JSON.stringify(currentCart))
-
-    // };
-    
     const dispatch = useDispatch();
 
     const [isAdded, setAddState] = useState(false);
     
     const addToRedux = () => {
+
+        const currentCart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        const product = {id, title, image, price};
+
+        currentCart.push(product);
+
+        localStorage.setItem('cart', JSON.stringify(currentCart))
+
         dispatch(add({ id, title, price }));
 
         setAddState(prevState => !prevState);
     };
 
-    const removeFromRedux = () => {
+    const removeFromRedux = (id) => {
+
+        const cart = JSON.parse(localStorage.getItem('cart')) || []; 
+
+        const updCart = cart.filter(item => item.id !== id)
+
+        localStorage.setItem('cart', JSON.stringify(updCart))
+
         dispatch(remove({ id }))
 
         setAddState(prevState => !prevState);
