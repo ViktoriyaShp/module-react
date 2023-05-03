@@ -1,7 +1,9 @@
+import React from 'react';
 
-import './cardBasket.css';
+import './BasketCard.css';
 
 import vector1 from '../../../assets/Vector1.png'
+
 
 const CardBasket = ({id, image, title, price, onRemoveHandler}) => {
 

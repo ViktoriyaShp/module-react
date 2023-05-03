@@ -6,12 +6,14 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 
-import Header from './Pages/Header/header.js';
-import Products from './Pages/ProductsPage/productsPage.js';
+import Header from './components/products/ProductsHeader/ProductsHeader';
+import Products from './Pages/ProductsPage/ProductsPage';
+import HeaderBasket from './components/basket/BasketHeader/BasketHeader';
+import Basket from './Pages/BasketPage/BasketPage';
 
-import HeaderBasket from './Pages/headerBasket/headerBasket';
-import Basket from './Pages/Basket/basket';
 
+import { store } from './store';
+import { Provider } from 'react-redux';
 
 import {
   createBrowserRouter,
@@ -27,7 +29,7 @@ const router = createBrowserRouter([
     </>
   },
   {
-    path: "/module-react/cart",
+    path: "/module-react/basket",
     element: <>
     <HeaderBasket />,
     <Basket />,
@@ -38,11 +40,10 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

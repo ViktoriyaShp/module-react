@@ -1,8 +1,9 @@
+import React from 'react';
 
-import './basket.css';
+import './BasketPage.css';
 
-import CardBasket from '../../components/elements/cardBasket/cardBasket';
-import FooterBasket from '../../components/elements/footerBasket/footerBasket';
+import CardBasket from '../../components/basket/BasketCard/BasketCard';
+import FooterBasket from '../../components/basket/BasketFooter/BasketFooter';
 
 import { useEffect } from 'react';
 import { useState } from 'react';

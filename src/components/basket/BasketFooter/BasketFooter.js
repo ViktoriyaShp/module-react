@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './footerBasket.css';
+import './BasketFooter.css';
 
 const FooterBasket =({amountPrice}) => {
 

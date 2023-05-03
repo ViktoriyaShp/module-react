@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './productsPage.css';
+import './ProductsPage.css';
 
-import Card from '../../components/elements/card/card';
+import Card from '../../components/products/ProductsCard/ProductsCard';
 
 import image1 from '../../assets/f1.png'
 import image2 from '../../assets/f2.png'
@@ -15,11 +15,21 @@ const Products =() => {
 
     const [products, setProducts] = useState([]);
 
+//     const [amountPrice, setAmountPrice] = useState(calcAmountPrice());
+
+// // const onAddProductToCart = () => {
+// //     setAmountPrice(calcAmountPrice())
+// // }
+
+// function calcAmountPrice() {
+//     const productsPriceInCart = JSON.parse(localStorage.getItem('cart')) || [];
+//     return productsPriceInCart.reduce((sum, {price}) => sum + price, 0)
+// }
+
     useEffect(() => {
         setTimeout(() => {
             setProducts(prevState => [
-                // ...prevState,
-                
+            
                     {
                         id: 1,
                         image: image1,
@@ -85,8 +95,7 @@ const Products =() => {
                         weight: 500
                     }
             ])
-
-        }, 1000)
+        })
     }, [])
 
     return (
@@ -100,6 +109,7 @@ const Products =() => {
             description={product.description}
             price={product.price}
             weight={product.weight}
+            // onAdd={onAddProductToCart}
             />)
         }</div>
     )
