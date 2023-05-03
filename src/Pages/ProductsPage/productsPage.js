@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './productsPage.css';
+import './ProductsPage.css';
 
-import Card from '../../components/elements/card/card';
+import Card from '../../components/products/ProductsCard/ProductsCard';
 
 import image1 from '../../assets/f1.png'
 import image2 from '../../assets/f2.png'
@@ -10,6 +10,10 @@ import image3 from '../../assets/f3.png'
 
 import { useEffect } from 'react';
 import { useState } from 'react';
+
+// import { add } from '../../store/reducers/products'
+
+// import { addBasket } from '../../store/reducers/products'
 
 const Products =() => {
 
@@ -86,7 +90,7 @@ const Products =() => {
                     }
             ])
 
-        }, 1000)
+        })
     }, [])
 
     return (
@@ -100,6 +104,7 @@ const Products =() => {
             description={product.description}
             price={product.price}
             weight={product.weight}
+            // add={() => add(product)}
             />)
         }</div>
     )

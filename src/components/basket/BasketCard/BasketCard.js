@@ -1,11 +1,15 @@
 
-import './cardBasket.css';
+import './BasketCard.css';
 
 import vector1 from '../../../assets/Vector1.png'
 
+// import { useDispatch } from 'react-redux';
+
+// import { remove } from '../../../store/reducers/products'
+
 const CardBasket = ({id, image, title, price, onRemoveHandler}) => {
 
-    const onRemoveFromCartHandler = () => {
+    const onRemoveFromCartHandler = (id) => {
         const cart = JSON.parse(localStorage.getItem('cart')) || []; 
 
         const updCart = cart.filter(item => item.id !== id)
@@ -14,6 +18,14 @@ const CardBasket = ({id, image, title, price, onRemoveHandler}) => {
 
         onRemoveHandler(updCart)
     }
+
+    // const dispatch = useDispatch();
+    
+    // const removeToRedux = () => {
+    //     dispatch(remove({
+    //         id
+    //     }))
+    // };
 
     return (
             <div className={'card-basket'}>

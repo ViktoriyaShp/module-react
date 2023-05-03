@@ -4,9 +4,17 @@ body {
     background-color: #161516;
 }
 
+.basket {
+    display: flex;
+    padding: 51px;
+    width: 60%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
 .basket_header {
     display: flex;
-    padding: 53px 385px;
     justify-content: center;
     gap: 63px;
 }
@@ -28,4 +36,21 @@ body {
     width:32px;
     height:32px;
     cursor: pointer;
+}
+
+.basket_header-btn {
+    width: 200px;
+    height: 42px;
+    background: #161516;
+    border-color: #D58C51;
+    cursor: pointer;
+}
+
+.basket_header-txt {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #D58C51;
 }
